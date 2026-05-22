@@ -2,132 +2,172 @@
 
 /* project 7  */
 
-#project7parentcointainer{
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e1e2f, #2b5876);
+    font-family: Arial, sans-serif;
+}
 
+
+#project7parentcointainer{
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
+
 #project7cointainer{
     display: grid;
-align-items: center;
-background: #7b137688;
-width: 75vw;
-height: 80%;
+    align-items: center;
+    background: #7b137688;
+    width: 75vw;
+    min-height: 80vh;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
+
 #parentboxcointainer7{
-display: flex;
-justify-content: center;
-margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
+
 #boxcointainer7{
     display: flex;
     justify-content: space-around;
-width: 70%;
-height: 15vh;
+    width: 70%;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 
-#child7cointainer{
-    padding-top: 8px;
+#child7cointainer,
+#capitalletters,
+#smallletters,
+#number,
+#Operators7{
+    background: #6ac0c0;
+    display: grid;
     align-items: center;
-border: 2px solid black;
-text-align: center;
-width: 100px;
-background: #6ac0c0;
+    width: 100px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 #input1{
     margin-bottom: 17px;
-
-} 
-
-
-#capitalletters,#smallletters,#number,#Operators7{
-    background: #6ac0c0;
-    display: grid;
-    align-items: center;
-width: 100px;
-    border: 2px solid black;
-    text-align: center;
-    padding-bottom: 10px;
-
 }
 
+
 #box2cointainer7{
-
-display: grid;
-width: 80%;
-height: 200px;
-justify-content: center;
-
+    display: grid;
+    width: 80%;
+    height: auto;
+    justify-content: center;
 }
 
 #parentbox2cointainer7{
-
-display: flex;
-justify-content: center;
-align-items: center;
-height: 270px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 10px;
 }
+
 #cointainertextarea7{
     display: flex;
     justify-content: center;
-margin-top: 5px;
-    width: 50vw;
-    height: 70px;
-position: relative;
-/* background: #000; */
+    margin-top: 5px;
+    width: 100%;
+    position: relative;
 }
+
 
 #showcode7{
 
-position: absolute;
-text-align: center;
-width: 75%;
-height: 50px;
-margin-top: 10px;
-margin-bottom: 10px;
-background: #e5ecec;
-padding-top: 13px;
-resize: none;
-
+    position: relative;
+    text-align: center;
+    width: 75%;
+    height: 50px;
+    background: #e5ecec;
+    padding-top: 13px;
+    resize: none;
+    border-radius: 10px;
 }
 
+
 #buttoncointainer7{
-display: grid;
-justify-content: center;
+    display: grid;
+    justify-content: center;
     padding-top: 10px;
     width: 100%;
 }
-#renderbtn7{
 
-margin-bottom: 10px;
-
-background: #92ffff8b;
-border: none;
-border-radius: 5px ;
-width:30vw;
-height: 45px;
-}
-
-#renderbtn7:hover{
-
-    background: #00b3ff[];
-}
-
-
+#renderbtn7,
 #copybtn7{
-    border-radius: 5px ;
+    border-radius: 5px;
     background: #92ffff8b;
-border: none;
-width: 30vw;
-margin-bottom: 10px;
-height: 45px;
+    border: none;
+    width: 30vw;
+    height: 45px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
+#renderbtn7:hover,
 #copybtn7:hover{
-    
     background: #00b3ff;
+}
+
+
+
+@media (max-width: 768px){
+
+    #project7cointainer{
+        width: 90vw;
+        padding: 10px;
+    }
+
+    #boxcointainer7{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #child7cointainer,
+    #capitalletters,
+    #smallletters,
+    #number,
+    #Operators7{
+        width: 80%;
+    }
+
+    #showcode7{
+        width: 90%;
+    }
+
+    #renderbtn7,
+    #copybtn7{
+        width: 80%;
+    }
+}
+
+
+@media (max-width: 480px){
+
+    #project7cointainer{
+        width: 95vw;
+    }
+
+    #renderbtn7,
+    #copybtn7{
+        width: 90%;
+        font-size: 14px;
+    }
 }
